@@ -3,6 +3,7 @@ const app = express();
 
 app.set('view engine', 'pug');
 app.set('views', './views');
+app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
   res.render('log');
